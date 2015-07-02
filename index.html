@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ToDo app</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+
+</head>
+<body>
+
+    <input id="todo-new-item" placeholder="Add items to list" autofocus><button id="add-new-item">Add</button>
+    <ul id="todo-list"></ul>
+    <label id="summary"></label>
+
+<script id="todo-list-template" type="text/x-handlebars-template">
+    {{#this}}
+    <li>
+        <label>{{this}}</label>
+        <button class="delete-button">Delete</button>
+    </li>
+    {{/this}}
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
